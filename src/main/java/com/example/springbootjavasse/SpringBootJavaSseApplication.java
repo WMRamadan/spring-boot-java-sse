@@ -47,7 +47,7 @@ public class SpringBootJavaSseApplication {
 
 	@GetMapping("/files/{name}")
 	SseEmitter files(@PathVariable String name){
-		SseEmitter sseEmitter = new SseEmitter(60L);
+		SseEmitter sseEmitter = new SseEmitter(100000L);
 		sses.put(name, sseEmitter);
 		return sseEmitter;
 	}
